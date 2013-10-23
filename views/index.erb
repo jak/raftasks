@@ -10,8 +10,11 @@
 	    <% end %>    
 	    </ul>
 	    <form method="post" action="/add">
-	        <input type="text" name="text" />
+	        <input type="text" name="text" id="text" />
 	        <button type="submit">Add</button>
 	    </form>
+	    <script type="text/javaScript">
+	    	document.getElementById('text').focus();
+	    </script>
     </body>
 </html>
