@@ -5,7 +5,8 @@ tasks = []
 (1..3).each { |i| tasks << "test task #{i}" }
 
 get '/' do
-    tasks.join ', '
+  @tasks = tasks
+  erb :index
 end
 
 post '/add' do
