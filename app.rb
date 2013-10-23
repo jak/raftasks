@@ -16,3 +16,7 @@ post '/add' do
         redirect to('/')
     end
 end
+
+post '/about' do
+	"This project has been made by Jak Spalding & Rafael Ruiz Morales"
+end
