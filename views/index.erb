@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <ul>
-    <% @tasks.each do |task| %>
-        <li><%= task %></li>
-    <% end %>    
-    </ul>
-    <form method="post" action="/add">
-        <input type="text" name="text" />
-        <button type="submit" />
-    </form>
+	<head>
+		<title>My Website TODOs</title>
+	</head>
+	<body>
+	    <ul>
+	    <% @tasks.each do |task| %>
+	        <li><%= task %></li>
+	    <% end %>    
+	    </ul>
+	    <form method="post" action="/add">
+	        <input type="text" name="text" />
+	        <button type="submit" />
+	    </form>
+    </body>
 </html>
