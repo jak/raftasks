@@ -11,6 +11,7 @@ end
 post '/add' do
     unless params[:text].empty?
         tasks << params[:text]
-        "Added: #{params[:text]}"
+        #"Added: #{params[:text]}"
+        redirect to('/')
     end
 end
