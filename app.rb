@@ -9,14 +9,13 @@ get '/' do
   erb :index
 end
 
+get '/about' do
+  erb :about
+end
+
 post '/add' do
     unless params[:text].empty?
         tasks << params[:text]
-        #"Added: #{params[:text]}"
         redirect to('/')
     end
-end
-
-post '/about' do
-	"This project has been made by Jak Spalding & Rafael Ruiz Morales"
 end
