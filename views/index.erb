@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>My Website TODOs</title>
-	</head>
-	<body>
-	    <ul>
-	    <% @tasks.each do |task| %>
-	        <li><%= task %></li>
-	    <% end %>    
-	    </ul>
-	    <form method="post" action="/add">
-	        <input type="text" name="text" id="text" />
-	        <button type="submit">Add</button>
-	    </form>
-	    <script type="text/javascript">
-	    	window.onload=function() {
-	    		document.getElementById('text').focus();
-	    	};
-	    </script>
-    </body>
+  <head>
+    <title>My Website TODOs</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <% @tasks.each do |task| %>
+          <li><%= task %></li>
+        <% end %>
+      </ul>
+      <form method="post" action="/add" class="form-horizontal">
+        <input type="text" name="text" id="text">
+        <button type="submit" class="btn">
+          <i class="icon-add"></i>Add
+        </button>
+      </form>
+    </div>
+
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      window.onload=function() {
+        document.getElementById('text').focus();
+      };
+    </script>
+  </body>
 </html>
