@@ -10,7 +10,7 @@
     <div class="container">
       <ul>
         <% @tasks.each do |task| %>
-          <li><input type="checkbox" /><%= task %></li>
+	  <li class="task"><input type="checkbox"><%= task %></li>
         <% end %>
       </ul>
       <form method="post" action="/add" class="form-horizontal">

@@ -5,7 +5,11 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
-
 .container ul li {
-	list-style-type: none;
+  list-style-type: none;
+}
+.task {
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
 }
